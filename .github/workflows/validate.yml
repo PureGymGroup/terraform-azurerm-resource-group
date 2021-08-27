@@ -1,4 +1,4 @@
-name: Formate and validate terraform
+name: Format and validate terraform
 on: [push, pull_request]
 jobs:
   Format-And-Validate:

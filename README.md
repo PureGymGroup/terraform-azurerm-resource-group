@@ -23,7 +23,7 @@ provider "azurerm" {
 }
 
 module "resource_group" {
-  source = "../../"
+  source = "github.com/PureGymGroup/terraform-azurerm-resource-group?ref=v0.0.1"
 
   name     = "testrg"
   location = "North Europe"

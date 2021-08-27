@@ -5,6 +5,9 @@
 This Terraform module creates or discovers an Azure Resource Group. The consumer must define a predicate to indicate whether they expect the resource group to already exist.
 
 ## Usage
+
+Reference the module using the github URL and revision tag
+
 ```
 terraform {
   required_providers {
@@ -20,7 +23,7 @@ provider "azurerm" {
 }
 
 module "test" {
-  source = "github.com/PureGymGroup/terraform-azurerm-resource-group"
+  source = "github.com/PureGymGroup/terraform-azurerm-resource-group?ref=v1.0.0"
 
   name     = "testrg"
   location = "North Europe"

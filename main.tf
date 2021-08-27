@@ -16,11 +16,18 @@ locals {
   resource_group = var.create_resource_group ? azurerm_resource_group.this[0] : data.azurerm_resource_group.this[0]
 }
 
-output "resource_group" {
-  value = {
-    id       = local.resource_group.id
-    name     = local.resource_group.name
-    location = local.resource_group.location
-    tags     = local.resource_group.tags
-  }
+output "id" {
+  value = local.resource_group.id
+}
+
+output "name" {
+  value = local.resource_group.name
+}
+
+output "location" {
+  value = local.resource_group.location
+}
+
+output "tags" {
+  value = local.resource_group.tags
 }

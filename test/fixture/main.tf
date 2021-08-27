@@ -11,7 +11,7 @@ provider "azurerm" {
   features {}
 }
 
-module "test" {
+module "resource_group" {
   source = "../../"
 
   name     = "testrg"
@@ -20,5 +20,14 @@ module "test" {
     "environment" = "test"
   }
 
-  create_resource_group = false
+  create_resource_group = true
+}
+
+output "resource_group_details" {
+  value = {
+    id       = module.resource_group.id
+    name     = module.resource_group.name
+    location = module.resource_group.location
+    tags     = module.resource_group.tags
+  }
 }

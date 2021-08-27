@@ -8,7 +8,7 @@ This Terraform module creates or discovers an Azure Resource Group. The consumer
 
 Reference the module using the github URL and revision tag
 
-```
+```terraform
 terraform {
   required_providers {
     azurerm = {
@@ -22,8 +22,8 @@ provider "azurerm" {
     features {}
 }
 
-module "test" {
-  source = "github.com/PureGymGroup/terraform-azurerm-resource-group?ref=v1.0.0"
+module "resource_group" {
+  source = "../../"
 
   name     = "testrg"
   location = "North Europe"
@@ -31,7 +31,16 @@ module "test" {
     "environment" = "test"
   }
 
-  create_resource_group = false
+  create_resource_group = true
+}
+
+output "resource_group_details" {
+  value = {
+    id       = module.resource_group.id
+    name     = module.resource_group.name
+    location = module.resource_group.location
+    tags     = module.resource_group.tags
+  }
 }
 ```
 

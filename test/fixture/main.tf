@@ -8,7 +8,7 @@ terraform {
 }
 
 provider "azurerm" {
-    features {}
+  features {}
 }
 
 module "test" {

@@ -1,5 +1,7 @@
 # Terraform AzureRm Resource Group
 
+![Format and validate terraform workflow](https://github.com/PureGymGroup/terraform-azurerm-resource-group/actions/workflows/validate.yml/badge.svg)
+
 This Terraform module creates or discovers an Azure Resource Group. The consumer must define a predicate to indicate whether they expect the resource group to already exist.
 
 ## Usage

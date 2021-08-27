@@ -42,3 +42,9 @@ A typical example might be checking the environment. For example:
 ```
 create_resource_group = !contains(["staging", "production"], var.environment)
 ```
+
+## Contributing
+
+Fork and raise a PR to contribute to this project.
+
+On merging, a version tag will automtically be created for consumers to reference. By default, this will be a `minor` version bump. To override this, one of your commit messages must contain `#major`, `#minor`, `#patch`, or `#none`.

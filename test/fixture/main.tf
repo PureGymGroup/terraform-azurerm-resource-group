@@ -1,10 +1,3 @@
-# Terraform AzureRm Resource Group
-
-
-
-## Getting started
-
-```
 terraform {
   required_providers {
     azurerm = {
@@ -19,7 +12,7 @@ provider "azurerm" {
 }
 
 module "test" {
-  source = "./rg"
+  source = "../../"
 
   name     = "testrg"
   location = "North Europe"
@@ -29,4 +22,3 @@ module "test" {
 
   create_resource_group = false
 }
-```

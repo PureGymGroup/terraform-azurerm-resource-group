@@ -1,0 +1,9 @@
+name: Formate and validate terraform
+on: [push, pull_request]
+jobs:
+  Format-And-Validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: hashicorp/setup-terraform@v1
+      - run: terraform fmt -recursive -check
+      - run: cd test/fixture && terraform init && terraform validate
